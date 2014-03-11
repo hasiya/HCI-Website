@@ -18,6 +18,27 @@
 	color: #FFFFFF;
 	padding: 2px;
 }
+body
+{
+	background-color: lightblue;
+	
+}
+.container {
+    width: 40%;
+    height: 40%;
+    background: #444;
+    margin: 0 auto;
+}
+.container img.wide {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+.container img.tall {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}​
 
 BODY {
 	background-color: #99CCFF;
@@ -97,6 +118,7 @@ LI {
 }
 
 .messageDiv {
+	border: 2px solid #A1A1A1;
 	background: #DDDDDD;
 	-moz-border-radius: 25px;
 	background-color: #FFFFFF;
@@ -109,6 +131,22 @@ LI {
 	z-index: 2;
 	text-align: right;
 	font-style: normal;
+}
+
+.profilephoto {
+	background: #DDDDDD;
+
+	-moz-border-radius: 25px;
+	background-color: #FFFFFF;
+	border-radius: 25px;
+	width: 600px;
+	height: 400px;
+	left: -10px;
+	top: -250px;
+	z-index: 2;
+	text-align: right;
+	font-style: normal;
+		position: relative;
 }
 
 .photoDiv {
