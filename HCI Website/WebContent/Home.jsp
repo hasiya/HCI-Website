@@ -27,14 +27,16 @@
 	<div class="Displaydiv">
 		<div>
 			<form action="HCI" method="post">
+			<h1 style="text-align: right">About me</h1>
+			<p style="text-align: right">Age: 55</p><br>
+			
 				Message:<input type="text" id="Message" name="Message"
 					class="MsoNormal"><br> <input type="submit"
 					name="send" value="Post Update" class="mybtn"><br>
 			</form>
 			<div class="updateDiv">
 				<%
-					List<PostStore> lTweet = (List<PostStore>) request
-							.getAttribute("Updates");
+					List<PostStore> lTweet = (List<PostStore>) request.getAttribute("Updates");
 					if (lTweet == null) {
 				%>
 				<p class="MsoNormal">No updates found</p>

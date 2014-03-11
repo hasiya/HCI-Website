@@ -53,7 +53,7 @@
 			</div>
 			<div class="messageDiv">
 				<%
-					List<MessageStore> lTweet = (List<MessageStore>) request.getAttribute("messages");
+					List<MessageStore> lTweet = (List<MessageStore>) request.getAttribute("message");
 					if (lTweet == null) {
 				%>
 				<p class="MsoNormal">No updates found</p>
