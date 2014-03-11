@@ -38,17 +38,15 @@
 				<p style="text-align: right">Full Name: New User</p>
 				<p style="text-align: right">Age: 55</p>
 				<p style="text-align: right">Email: newuser@example.co.uk</p>
-				<div class="profilephoto">
-					<div class="container">
-						<img alt="Profile Picture" src="">
-					</div>
+				<div class="container">
+					<img alt="Profile Picture" src="http://i.imgur.com/R9JX1Lz.jpg"
+						style="width: 100%; height: 100%;">
 				</div>
-
-				<br>
-				<br>
-				Post an update<input type="text" id="Message" name="Message"
-					class="MsoNormal"><br> <input type="submit"
-					name="send" value="Post Update" id="shiny"><br>
+				<div style="top: -100px; position: relative">
+					Post an update<input type="text" id="Message" name="Message"
+						class="MsoNormal"><br> <input type="submit"
+						name="send" value="Post Update" id="shiny"><br>
+				</div>
 			</form>
 			<div class="updateDiv">
 				<%
