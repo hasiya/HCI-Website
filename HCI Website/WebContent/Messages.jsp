@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=US-ASCII"
 	pageEncoding="US-ASCII"%>
+<%@ page import="com.example.HCI.stores.*, java.util.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,23 +25,23 @@
 			<div class="friendDiv">
 				<ul>
 					<li><input type="submit" id="shiny" value="Joe Bloggs" />
-					<hr></li>
+						<hr></li>
 					<li><input type="submit" id="shiny"
 						value="Hugh Major Masterson" />
-					<hr></li>
+						<hr></li>
 					<li><input type="submit" id="shiny"
 						value="Marshal Flynn Victor" />
-					<hr></li>
+						<hr></li>
 					<li><input type="submit" id="shiny" value="Benjy Zeph Danniel" />
-					<hr></li>
+						<hr></li>
 					<li><input type="submit" id="shiny"
 						value="Braidy Codie Sessions" />
-					<hr></li>
+						<hr></li>
 					<li><input type="submit" id="shiny"
 						value="Guy Sinclair Smalls" />
-					<hr></li>
+						<hr></li>
 					<li><input type="submit" id="shiny" value="Coty Ronald Toller" />
-					<hr></li>
+						<hr></li>
 				</ul>
 			</div>
 			<div class="submitDiv">
@@ -51,9 +52,28 @@
 				<hr>
 			</div>
 			<div class="messageDiv">
-				<p style="text-align: left">hi name</p>
+				<%
+					List<MessageStore> lTweet = (List<MessageStore>) request.getAttribute("messages");
+					if (lTweet == null) {
+				%>
+				<p class="MsoNormal">No updates found</p>
+				<%
+					} else {
+						Iterator<MessageStore> iterator;
+
+						iterator = lTweet.iterator();
+						while (iterator.hasNext()) {
+							MessageStore ms = (MessageStore) iterator.next();
+				%>
 				<br>
-				<p>${name}: ${message}</p>
+				<p class="MsoNormal" value=><%=ms.getUser()%><br><%=ms.getMessage()%></a>
+				</p>
+				<br>
+				<hr>
+				<%
+					}
+					}
+				%>
 			</div>
 		</form>
 	</div>

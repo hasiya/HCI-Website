@@ -22,7 +22,7 @@ import com.sun.rowset.internal.Row;
 public class HCI extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	LinkedList<PostStore> postList = new LinkedList<PostStore>();
-	LinkedList<MessageStore> messageStore = new LinkedList<MessageStore>();
+	LinkedList<MessageStore> messageList = new LinkedList<MessageStore>();
 	String name=null;
 
 	/**
@@ -121,11 +121,16 @@ public class HCI extends HttpServlet {
 			rd.forward(request,response);
 		}
 		else if(request.getParameter("reply")!=null)
-		{
+		{		
 			String message = request.getParameter("Message");
 
-			request.setAttribute("message",message);
-			request.setAttribute("name",name);
+			MessageStore ms = new MessageStore();
+			ms.setUser(name);
+			ms.setMessage(message);
+			
+			messageList.add(ms);
+			
+			request.setAttribute("message",messageList);
 
 			RequestDispatcher rd = request.getRequestDispatcher("Messages.jsp");
 			rd.forward(request,response);
