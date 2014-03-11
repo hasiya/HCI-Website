@@ -28,8 +28,8 @@
 </head>
 <body>
 	<div class="Displaydiv">
-		<div class="container">
-			<img src="http://i.imgur.com/R9JX1Lz.jpg" />
+		<div class="container" style="position:relative;top:300px;">
+			<img src="http://i.imgur.com/R9JX1Lz.jpg" style="width: 200%; height: 200%;">
 		</div>
 	</div>
 </body>
